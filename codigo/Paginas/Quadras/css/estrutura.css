@@ -86,7 +86,7 @@ body {
 
 .navbar .navbar-toggler {
   top: .25rem;
-  left: 30%;
+  right: 5%;
 }
 
 .navbar .form-control {
