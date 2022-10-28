@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alugel de quadra</title>
+  <title>AluQuadras</title>
 
 
   <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -15,22 +15,25 @@
 </head>
 
 <body>
-
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
-    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
-      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fa fa-home"></i>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search" aria-label="Search"> -->
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <a class="nav-link px-3 " href="#">Sign out</a>
+      </div>
+    </div>
   </header>
-
   <div class="container-fluid">
     <div class="row">
       <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="position-sticky pt-3 sidebar-sticky">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+              <a class="nav-link active" aria-current="page" href="painel.html">
                 <span class="material-symbols-outlined">
                   home
                 </span>
@@ -46,7 +49,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="../../Agenda/html/agenda.html">
                 <span class="material-symbols-outlined">
                   calendar_month
                 </span>
@@ -69,7 +72,7 @@
                 Marcações
               </a>
             </li>
-            <li class="nav-item mt-5">
+            <li class="nav-item">
               <a class="nav-link" href="#">
                 <span class="material-symbols-outlined">
                   logout
@@ -84,26 +87,10 @@
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div
           class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1  class="h2">Dashboard</h1>
+          <h1  class="h2">Painel</h1>
           <div class="btn-toolbar mb-2 mb-md-0">
-            <!-- <div class="btn-group me-2">
-              <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-            </div>
-            <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-calendar align-text-bottom" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-              This week
-            </button> -->
           </div>
         </div>
-
         <div class="row mb-5">
           <div class="col-sm-12">
             <div class="card">
@@ -176,9 +163,7 @@
             <div class="card">
               <div class="card-body text-center">
                 <h5 class="card-title">Marcações do mês</h5>
-                <img src="../img/calendar.jpg" style="width: 100%;"/>
-                <!-- <a href="#" class="btn btn-success">Visualizar marcações</a> -->
-                
+                <img src="../img/calendar.jpg" style="width: 100%;"/>                
               </div>
             </div>
           </div>
@@ -188,10 +173,10 @@
                 <h5 class="card-title">Valor à receber hoje</h5>
                 <p class="card-text"></p>
                 <div style="width: 100%; color: green;">
-                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 200,'opsz' 72 ;">
+                  <span class="material-symbols-outlined" style=" font-size:100px;">
                     savings
                   </span> 
-                  <h1 >1.600,00</h1>
+                  <h1>R$ 1.600,00</h1>
                 </div>
                 <!-- <a href="#" class="btn btn-success">Visualizar marcações</a> -->
               </div>
