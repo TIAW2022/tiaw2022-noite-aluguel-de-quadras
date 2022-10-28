@@ -1,0 +1,107 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AluQuadras</title>
+
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/estrutura.css" rel="stylesheet">
+    <link href="../css/agenda.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="theme-color" content="#712cf9">
+
+</head>
+
+<body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Bem vindo de volta! </a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="logo">
+                    <img alt="logo" src="../img/logo_1.png" width="100%">
+                </div>
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    home
+                                </span>
+                                Painel
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Quadras/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    width_wide
+                                </span>
+                                Quadras
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../../Agenda/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    calendar_month
+                                </span>
+                                Agenda
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Clientes/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    group
+                                </span>
+                                Clientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Marcacoes/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    checklist
+                                </span>
+                                Marcações
+                            </a>
+                        </li>
+                        <li class="nav-item logout">
+                            <a class="nav-link" href="../../LandingPage/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Agenda</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col-sm-12">
+                        <div id="calendar"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="../js/moment.min.js"></script>
+<script src="../js/agenda.js"></script>
+
+</html>
