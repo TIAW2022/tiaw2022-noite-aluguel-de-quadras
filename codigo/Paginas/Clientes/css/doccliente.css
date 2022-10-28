@@ -1,0 +1,30 @@
+h5{
+   margin-left: 20%;
+}
+h1{
+    padding-left: 50%;
+}
+.card{
+    border: none;
+}
+.txt1{
+    display: inline-flex;
+    padding-left: 30%;
+}
+.txt2{
+    display: flex;
+    padding-left: 30%;
+}
+.salvar{
+    border:solid;
+}
+#text{
+    margin-left: 10%;
+}
+#text2{
+    margin-left: 3%;
+}
+#botao{
+    margin-top: 35px;
+    padding-left: 33%;
+}

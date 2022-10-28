@@ -1,0 +1,160 @@
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlugQuadras</title>
+
+    <link rel="stylesheet" href="../css/doccliente.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/estrutura.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="theme-color" content="#712cf9">
+    
+
+</head>
+
+<body>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Bem vindo de volta! </a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="logo">
+                    <img alt="logo" src="../img/logo_1.png" width="100%">
+                </div>
+                <div class="position-sticky pt-3 sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    home
+                                </span>
+                                Painel
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Quadras/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    width_wide
+                                </span>
+                                Quadras
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Agenda/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    calendar_month
+                                </span>
+                                Agenda
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../../Clientes/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    group
+                                </span>
+                                Clientes
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../Marcacoes/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    checklist
+                                </span>
+                                Marcações
+                            </a>
+                        </li>
+                        <li class="nav-item logout">
+                            <a class="nav-link" href="../../LandingPage/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Sair
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Clientes</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                    </div>
+                </div>
+                <div class="txt1">
+                    <div class="card" id="text" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome</h5>
+                            <form action="">
+                                <input class="form-control me-2" type="text" placeholder="Nome" id="nome"
+                                    aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card" id="text" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Sobrenome</h5>
+                            <form action="">
+                                <input class="form-control me-2" type="text" placeholder="Sobrenome" id="sobrenome"
+                                    aria-label="Search">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card" id="text" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">E-mail</h5>
+                            <input class="form-control me-2" type="email" onblur="validacaoEmail(f1.email)"
+                                placeholder="E-mail" aria-label="Search">
+                        </div>
+                    </div>
+                </div>
+                <div class="txt2">
+                    <div class="card" id="text2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Telefone</h5>
+                            <input class="form-control me-2" type="text" placeholder="Number"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
+                        </div>
+                    </div>
+                    <div class="card" id="text2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Whatsapp</h5>
+                            <input class="form-control me-2" type="text" placeholder="Number"
+                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
+                        </div>
+                    </div>
+                    <div class="card" id="text2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Ativo</h5>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecione</option>
+                                <option value="1">Sim</option>
+                                <option value="2">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2 d-md-block" id="botao">
+                    <button class="btn salvar" type="button">Salvar</button>
+                    <button class="btn salvar" style="margin-left:10px;" type="button">Cancelar</button>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="../js/doc.js" defer></script>
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+</html>
