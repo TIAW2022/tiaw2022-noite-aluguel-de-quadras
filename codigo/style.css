@@ -4,15 +4,30 @@ body{
     overflow: hidden;
 }
 
-
 .area-login{
     display: flex;
-    height: 100vh;
+    height:100vh ;
     justify-content: center;
     align-items: center;
 }
-
 .login{
     background-color: #181920;
-
+    width: 355px;
+    height: 340px;
+    padding: 35px;
+    
 }
+ .login form{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .login input{
+    margin-top: 10px;
+
+ }
+
+ .login img{
+    width: 100%;
+    height: auto;
+ }
