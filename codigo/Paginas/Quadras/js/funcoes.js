@@ -20,18 +20,19 @@ function listaQuadras(){
 
 }
 function adicionaQuadra(){
-    let id = quadras.length+1;
+    var quadraAdd = JSON.parse(localStorage.getItem('quadras') || "[]");
+    let id = quadraAdd.length+1;
     let nome = $('#nome').val();
     let tipo = $('#tipo').val();
     var ativo = $('#ativo').val();
     let valor = $('#valor').val();
-    quadras.push({id, nome, tipo, ativo, valor});
-    localStorage.setItem('quadras', JSON.stringify(quadras));
+    quadraAdd.push({id, nome, tipo, ativo, valor});
+    localStorage.setItem('quadras', JSON.stringify(quadraAdd));
 }
 
 $(document).ready( function () {
     
-      $("#salvar").on( "click", function() {
+    $("#salvar").on( "click", function() {
         adicionaQuadra();
     });
     listaQuadras();
