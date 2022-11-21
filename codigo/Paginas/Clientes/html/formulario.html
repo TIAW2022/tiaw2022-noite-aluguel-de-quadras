@@ -92,56 +92,60 @@
                     <div class="btn-toolbar mb-2 mb-md-0">
                     </div>
                 </div>
-                <div class="txt1">
-                    <div class="card" id="text" style=" width: 33%;">
-                        <div class="card-body">
-                            <h5 class="card-title">Nome</h5>
-                            <form action="">
-                                <input class="form-control me-2" type="text" placeholder="Nome" id="nome"
-                                    aria-label="Search">
-                            </form>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="txt1">
+                            <div class="card" id="text" style=" width: 33%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nome</h5>
+                                    <form action="">
+                                        <input class="form-control me-2" type="text" placeholder="Nome" id="nome"
+                                            aria-label="Search">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card" id="text" style="width: 33%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobrenome</h5>
+                                    <form action="">
+                                        <input class="form-control me-2" type="text" placeholder="Sobrenome" id="sobrenome"
+                                            aria-label="Search">
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card" id="text" style="width: 33%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">E-mail</h5>
+                                    <input class="form-control me-2" type="email" onblur="validacaoEmail(f1.email)"
+                                        placeholder="E-mail" aria-label="Search">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card" id="text" style="width: 33%;">
-                        <div class="card-body">
-                            <h5 class="card-title">Sobrenome</h5>
-                            <form action="">
-                                <input class="form-control me-2" type="text" placeholder="Sobrenome" id="sobrenome"
-                                    aria-label="Search">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="card" id="text" style="width: 33%;">
-                        <div class="card-body">
-                            <h5 class="card-title">E-mail</h5>
-                            <input class="form-control me-2" type="email" onblur="validacaoEmail(f1.email)"
-                                placeholder="E-mail" aria-label="Search">
-                        </div>
-                    </div>
-                </div>
-                <div class="txt2">
-                    <div class="card" id="text2" style="width: 33%;">
-                        <div class="card-body">
-                            <h5 class="card-title">Telefone</h5>
-                            <input class="form-control me-2" type="text" placeholder="Number"
-                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
-                        </div>
-                    </div>
-                    <div class="card" id="text2" style="width: 33%;">
-                        <div class="card-body">
-                            <h5 class="card-title">Whatsapp</h5>
-                            <input class="form-control me-2" type="text" placeholder="Number"
-                                onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
-                        </div>
-                    </div>
-                    <div class="card" id="text2" style="width: 33%;">
-                        <div class="card-body">
-                            <h5 class="card-title">Ativo</h5>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Selecione</option>
-                                <option value="1">Sim</option>
-                                <option value="2">Não</option>
-                            </select>
+                        <div class="txt2">
+                            <div class="card" id="text2" style="width: 33%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Telefone</h5>
+                                    <input class="form-control me-2" type="text" placeholder="Number"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
+                                </div>
+                            </div>
+                            <div class="card" id="text2" style="width: 33%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Whatsapp</h5>
+                                    <input class="form-control me-2" type="text" placeholder="Number"
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
+                                </div>
+                            </div>
+                            <div class="card" id="text2" style="width: 33%;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ativo</h5>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Selecione</option>
+                                        <option value="1">Sim</option>
+                                        <option value="2">Não</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
