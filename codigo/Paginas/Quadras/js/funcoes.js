@@ -1,33 +1,39 @@
+var quadras = [];
+
 function listaQuadras(){
+    var quadras1 = JSON.parse(localStorage.getItem('quadras') || "[]");
+    console.log(quadras1)
     var item = '';
-    let quadras = [];
-    let quadra = 
-    {
-        'id': 1,
-        'nome':'Quadra 1',
-        'tipo':'Society',
-        'ativa':'Sim',
-        'valor':'R$ 100,00',
-    }
-    quadras.push(quadra);
-    quadras.forEach(quadra => {
+
+    quadras1.forEach(quadra => {
         item += `
         <tr>
             <td>${quadra.id}</td>
             <td>${quadra.nome}</td>
             <td>${quadra.tipo}</td>
-            <td>${quadra.ativa}</td>
-            <td>${quadra.valor}</td>
+            <td>${quadra.ativo}</td>
+            <td>R$ ${quadra.valor}</td>
         </tr>`
     });
     
     $('#corpoLista').html(item)
-    // $(".loader-wrapper").fadeOut("slow" | 4000)
-    console.log(quadras)
+
+}
+function adicionaQuadra(){
+    let id = quadras.length+1;
+    let nome = $('#nome').val();
+    let tipo = $('#tipo').val();
+    var ativo = $('#ativo').val();
+    let valor = $('#valor').val();
+    quadras.push({id, nome, tipo, ativo, valor});
+    localStorage.setItem('quadras', JSON.stringify(quadras));
 }
 
-$(document).ready(function () {
+$(document).ready( function () {
     
+      $("#salvar").on( "click", function() {
+        adicionaQuadra();
+    });
     listaQuadras();
     
 })
