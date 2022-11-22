@@ -2,7 +2,7 @@ var marcacoes = [];
 
 function listaMarcacoes() {
     var adicionarMarc = JSON.parse(localStorage.getItem('marcacoes') || "[]");
-    console.log(adicioanrMarc)
+    console.log(adicionarMarc)
     var item = '';
 
     adicionarMarc.forEach(marcacao => {
@@ -36,7 +36,7 @@ function validaAtivo(ativo){
 }
 function adicionaMarcacoes() {
     var marcAdd = JSON.parse(localStorage.getItem('marcacoes') || "[]");
-    var id = quadraAdd.length + 1;
+    var id = marcAdd.length + 1;
     var nome = $('#nome').val();
     var sobrenome = $('#sobrenome').val();
     var email = $('#email').val();
@@ -44,7 +44,7 @@ function adicionaMarcacoes() {
     var wpp = $('#wpp').val();
     var ativo = $('#ativo').val();
     validaAtivo(ativo);
-    quadraAdd.push({
+    marcAdd.push({
         id,
         nome,
         sobrenome,
@@ -53,6 +53,7 @@ function adicionaMarcacoes() {
         wpp,
         ativo
     });
+    console.log(marcAdd);
     localStorage.setItem('marcacoes', JSON.stringify(marcAdd));
 }
 
