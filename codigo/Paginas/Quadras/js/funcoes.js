@@ -2,7 +2,6 @@ var quadras = [];
 
 function listaQuadras() {
     var quadras1 = JSON.parse(localStorage.getItem('quadras') || "[]");
-    console.log(quadras1)
     var item = '';
 
     quadras1.forEach(quadra => {
@@ -13,10 +12,10 @@ function listaQuadras() {
             <td>${quadra.tipo}</td>
             <td>${quadra.ativo}</td>
             <td>R$ ${quadra.valor}</td>
-            <td class="text-center">
-                <div style="font-size: 22px;display: flex;justify-content: space-evenly;align-items: center;">
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <td class="text-center" style="display: flex; justify-content: center;">
+                <div style="font-size: 19px;display: flex;justify-content: center;align-items: center;">
+                    <a id="editar" data-target="${quadra.id}" type="button" class="btn btn-outline-dark" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <a id="deletar" data-target="${quadra.id}" type="button" class="btn btn-outline-danger" style="margin-left: 5%" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                 </div>
             </td>
         </tr>`
@@ -25,19 +24,21 @@ function listaQuadras() {
     $('#corpoLista').html(item)
 
 }
-function validaAtivo(ativo){
-    if(ativo === ''){
-        ativo = ''
+
+function validaAtivo(ativo) {
+    if (ativo === '') {
+        ativo = "-----"
     }
 }
+
 function adicionaQuadra() {
     var quadraAdd = JSON.parse(localStorage.getItem('quadras') || "[]");
-    let id = quadraAdd.length + 1;
-    let nome = $('#nome').val();
-    let tipo = $('#tipo').val();
+    var id = quadraAdd.length + 1;
+    var nome = $('#nome').val();
+    var tipo = $('#tipo').val();
     var ativo = $('#ativo').val();
-    validaAtivo(ativo);
-    let valor = $('#valor').val();
+    validaAtivo(ativo)
+    var valor = $('#valor').val();
     quadraAdd.push({
         id,
         nome,
@@ -45,13 +46,29 @@ function adicionaQuadra() {
         ativo,
         valor
     });
+    console.log(quadraAdd)
     localStorage.setItem('quadras', JSON.stringify(quadraAdd));
 }
 
-$(document).ready(function () {
+function editarQuadra(){}
 
+$(document).ready(function () {
+    
     $("#salvar").on("click", function () {
         adicionaQuadra();
+    });
+    $( "body" ).delegate( "#deletar", "click", function() {
+        quadras = $.parseJSON(localStorage.getItem('quadras'))
+        let idTarget = $(this).attr('data-target')/quadras.length-1;
+        if (quadras.length == 1){
+            idTarget = 0
+        }
+        quadras.splice(idTarget, 1)
+        localStorage.setItem("quadras", JSON.stringify(quadras))
+        location.reload()
+    });
+    $("#editar").on("click", function () {
+        editarQuadra();
     });
     listaQuadras();
 
