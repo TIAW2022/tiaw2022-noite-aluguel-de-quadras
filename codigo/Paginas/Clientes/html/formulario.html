@@ -12,6 +12,9 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta name="theme-color" content="#712cf9">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>
+    <script src="../js/doc.js"></script>
     
 
 </head>
@@ -116,7 +119,7 @@
                             <div class="card" id="text" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">E-mail</h5>
-                                    <input class="form-control me-2" type="email" onblur="validacaoEmail(f1.email)"
+                                    <input class="form-control me-2" id="email" type="email" onblur="validacaoEmail(f1.email)"
                                         placeholder="E-mail" aria-label="Search">
                                 </div>
                             </div>
@@ -125,21 +128,21 @@
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Telefone</h5>
-                                    <input class="form-control me-2" type="text" placeholder="Number"
+                                    <input class="form-control me-2" id="telefone" type="text" placeholder="Number"
                                         onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
                                 </div>
                             </div>
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Whatsapp</h5>
-                                    <input class="form-control me-2" type="text" placeholder="Number"
+                                    <input class="form-control me-2" id="whats" type="text" placeholder="Number"
                                         onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
                                 </div>
                             </div>
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Ativo</h5>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" id="ativo" aria-label="Default select example">
                                         <option selected>Selecione</option>
                                         <option value="1">Sim</option>
                                         <option value="2">Não</option>
@@ -151,7 +154,7 @@
                 </div>
 
                 <div class="d-grid gap-2 d-md-block" id="botao">
-                    <a href="../html/index.html" class="btn btn-outline-dark">Salvar</a>
+                    <a href="../html/index.html" type="submit" id="salvar" class="btn btn-outline-dark">Salvar</a>
                     <a href="../html/index.html" class="btn btn-outline-dark">Cancelar</a>
                </div>
             </main>
