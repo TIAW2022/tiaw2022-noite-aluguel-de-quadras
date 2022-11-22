@@ -14,6 +14,8 @@
     <meta name="theme-color" content="#712cf9">
     <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="../js/adicionar.js"></script>
     
 
@@ -110,43 +112,50 @@
                     <div class="txt1">
                         <div class="card" id="text" style=" width: 33%;">
                             <div class="card-body">
-                                <h5 class="card-title">Nome</h5>
+                                <!-- será necessário implementar um select, puxando os clientes da tela de Clientes -->
+                                <h5 class="card-title">Cliente</h5>
                                 <form action="">
-                                    <input class="form-control me-2" type="text" placeholder="Nome" id="nome"
+                                    <input class="form-control me-2" type="text" placeholder="Nome" id="cliente"
                                         aria-label="Search">
                                 </form>
                             </div>
                         </div>
                         <div class="card" id="text" style="width: 33%;">
                             <div class="card-body">
-                                <h5 class="card-title">Sobrenome</h5>
+                                <h5 class="card-title">Quadra</h5>
                                 <form action="">
-                                    <input class="form-control me-2" type="text" placeholder="Sobrenome" id="sobrenome"
+                                    <input class="form-control me-2" type="text" placeholder="Nome" id="quadra"
                                         aria-label="Search">
                                 </form>
                             </div>
                         </div>
                         <div class="card" id="text" style="width: 33%;">
                             <div class="card-body">
-                                <h5 class="card-title">E-mail</h5>
-                                <input class="form-control me-2" type="email" onblur="validacaoEmail(f1.email)"
-                                    placeholder="E-mail" id="email" aria-label="Search">
+                                <h5 class="card-title">Data/Hora</h5>
+                                <input class="form-control me-2" type="text" placeholder="Data/Hora" id="data" aria-label="Search">
                             </div>
                         </div>
                     </div>
                     <div class="txt2">
                         <div class="card" id="text2" style="width: 33%;">
                             <div class="card-body">
-                                <h5 class="card-title">Telefone</h5>
-                                <input class="form-control me-2" type="text" placeholder="Número"
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="tel" aria-label="Search">
+                                <h5 class="card-title">Valor</h5>
+                                <input class="form-control me-2" type="text" placeholder="Valor"
+                                    onkeypress="$(this).mask('###,##', {reverse: true}); return event.charCode >= 48 && event.charCode <= 57" id="valor" aria-label="Search">
+                                    <!-- <input type="text" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});"> -->
+
                             </div>
                         </div>
                         <div class="card" id="text2" style="width: 33%;">
                             <div class="card-body">
-                                <h5 class="card-title">Whatsapp</h5>
-                                <input class="form-control me-2" type="text" placeholder="Número"
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="wpp" aria-label="Search">
+                                <h5 class="card-title">Pago</h5>
+                                <select required class="form-select" id="pago">
+                                    <option selected value="">Selecione</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>
+                                <!-- <input class="form-control me-2" type="text" placeholder="Número"
+                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="wpp" aria-label="Search"> -->
                             </div>
                         </div>
                         <div class="card" id="text2" style="width: 33%;">
