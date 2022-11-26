@@ -57,15 +57,15 @@ $(document).ready(function () {
     $("#salvar").on("click", function () {
         adicionaQuadra();
     });
-    $( "body" ).delegate( "#deletar", "click", function() {
-        quadras = $.parseJSON(localStorage.getItem('quadras'))
+    $('body').delegate('#deletar', 'click', function() {
+        quadras = $.parseJSON(localStorage.getItem('quadras'));
         let idTarget = $(this).attr('data-target')/quadras.length-1;
         if (quadras.length == 1){
-            idTarget = 0
-        }
-        quadras.splice(idTarget, 1)
-        localStorage.setItem("quadras", JSON.stringify(quadras))
-        location.reload()
+            idTarget = 0;
+        };
+        quadras.splice(idTarget, 1);
+        localStorage.setItem('quadras', JSON.stringify(quadras));
+        location.reload();
     });
     $("#editar").on("click", function () {
         editarQuadra();
