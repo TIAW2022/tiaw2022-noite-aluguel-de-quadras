@@ -15,7 +15,7 @@ function listaQuadras() {
             <td class="text-center" style="display: flex; justify-content: center;">
                 <div style="font-size: 19px;display: flex;justify-content: center;align-items: center;">
                     <a id="editar" data-target="${quadra.id}" type="button" class="btn btn-outline-dark" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                    <a id="deletar" data-target="${quadra.id}" type="button" class="btn btn-outline-danger" style="margin-left: 5%" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                    <a id="deletar" data-target="${quadra.id}" type="button" class="btn btn-outline-danger deletar" style="margin-left: 5%" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                 </div>
             </td>
         </tr>`
@@ -39,15 +39,25 @@ function adicionaQuadra() {
     var ativo = $('#ativo').val();
     validaAtivo(ativo)
     var valor = $('#valor').val();
-    quadraAdd.push({
-        id,
-        nome,
-        tipo,
-        ativo,
-        valor
+    var validacaoForm = $(function () {
+        $("#form_quadra").validate();
     });
-    console.log(quadraAdd)
-    localStorage.setItem('quadras', JSON.stringify(quadraAdd));
+    var resultadoValidacao = $("#form_quadra").valid();
+    console.log(resultadoValidacao)
+    if(resultadoValidacao === false){
+        alert('Deu ruim!')
+    }
+    {
+        quadraAdd.push({
+            id,
+            nome,
+            tipo,
+            ativo,
+            valor
+        });
+        console.log(resultadoValidacao)
+        localStorage.setItem('quadras', JSON.stringify(quadraAdd));
+    }
 }
 
 function editarQuadra(){}
@@ -56,8 +66,9 @@ $(document).ready(function () {
     
     $("#salvar").on("click", function () {
         adicionaQuadra();
+        $(this).attr('href', 'quadras.html');
     });
-    $('body').delegate('#deletar', 'click', function() {
+    $('body').delegate('.deletar', 'click', function() {
         quadras = $.parseJSON(localStorage.getItem('quadras'));
         let idTarget = $(this).attr('data-target')/quadras.length-1;
         if (quadras.length == 1){
