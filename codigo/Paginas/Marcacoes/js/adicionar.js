@@ -41,25 +41,39 @@ function adicionaMarcacoes() {
     var valor = $('#valor').val();
     var pago = $('#pago').val();
     var ativo = $('#ativo').val();
+    
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Preenchimento obrigatório!",
+        minlength: jQuery.validator.format("É necessário inserir no mínimo {0} caracteres."),
+    })
+    
+    $(function(){
+        $("#form_marcacao").validate();
+    })
+
+    var validacao = $("#form_marcacao").valid();
+    console.log(validacao);
     validaAtivo(ativo);
-    marcAdd.push({
-        id,
-        cliente,
-        quadra,
-        data,
-        valor,
-        pago,
-        ativo
-    });
-    console.log(marcAdd);
-    localStorage.setItem('marcacoes', JSON.stringify(marcAdd));
+    if(validacao == true){
+        marcAdd.push({
+            id,
+            cliente,
+            quadra,
+            data,
+            valor,
+            pago,
+            ativo
+        });
+        console.log(marcAdd);
+        localStorage.setItem('marcacoes', JSON.stringify(marcAdd));
+        window.location.href = "../html/index.html";
+    }
 }
 
 $(document).ready(function () {
 
-    $("#salvar").on("click", function () {
+    $("#salvar").on("click", function (){
         adicionaMarcacoes();
     });
     listaMarcacoes();
-
 })
