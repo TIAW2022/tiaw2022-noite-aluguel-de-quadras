@@ -70,7 +70,7 @@ $(document).ready(function () {
 
     $("#salvar").on("click", function () {
         adicionaQuadra();
-        $(this).attr('href', 'quadras.html');
+        $(this).attr('href', 'index.html');
     });
     $('body').delegate('.deletar', 'click', function () {
         quadras = $.parseJSON(localStorage.getItem('quadras'));

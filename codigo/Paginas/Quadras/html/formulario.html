@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AlugQuadras</title>
 
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-
     <link rel="stylesheet" href="../css/style.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/fontawesome.min.css" rel="stylesheet">
@@ -15,7 +12,6 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta name="theme-color" content="#712cf9">
-    <link href="../css/tooltip.css" rel="stylesheet">
     <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -31,60 +27,62 @@
     <main class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="logo">
-                    <img alt="logo" src="../img/logo_1.png" width="100%">
+                <div class="logo" style="background-color: #333;">
+                    <img id="logo" alt="logo" src="../img/logo_1.png" width="100%">
+                    <img id="logoSmall" alt="logo" src="../img/nome.png" width="100%" class="">
                 </div>
-                <div class="position-sticky pt-3 sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
+                <div id="listaNav" class="pt-3 col-12">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
                                 <span class="material-symbols-outlined">
                                     home
                                 </span>
                                 Painel
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link active" href="../../Quadras/html/index.html">
                                 <span class="material-symbols-outlined">
                                     width_wide
                                 </span>
-                                Quadras
+                            Quadras
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Agenda/html/index.html">
                                 <span class="material-symbols-outlined">
                                     calendar_month
                                 </span>
                                 Agenda
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Clientes/html/index.html">
                                 <span class="material-symbols-outlined">
                                     group
                                 </span>
                                 Clientes
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Marcacoes/html/index.html">
                                 <span class="material-symbols-outlined">
                                     checklist
                                 </span>
                                 Marcações
                             </a>
-                        </li>
-                        <li class="nav-item logout">
-                            <a class="nav-link" href="../../landing_page/html/index.html">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link text-danger" href="../../landing_page/html/index.html">
                                 <span class="material-symbols-outlined">
                                     logout
                                 </span>
                                 Sair
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+
                 </div>
             </nav>
 
@@ -104,10 +102,10 @@
                                     <input type="text" name="nome" id="nome" required minlength="2"
                                         class="form-control me-2 invalid" placeholder="Nome da quadra">
                                 </div>
-                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text" >
-                                <h5><label for="tipo">Tipo</label></h5>
-                                    <select required name="tipo" minlenght="1" class="form-select me-2 invalid" type="text"
-                                        placeholder="Society, basquete, etc..." id="tipo">
+                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text">
+                                    <h5><label for="tipo">Tipo</label></h5>
+                                    <select required name="tipo" minlenght="1" class="form-select me-2 invalid"
+                                        type="text" placeholder="Society, basquete, etc..." id="tipo">
                                         <option value="">Selecione</option>
                                         <option value="Poliesportiva">Poliesportiva</option>
                                         <option value="Society">Society</option>
@@ -121,8 +119,8 @@
                                 </div>
                             </div>
                             <div class="form2 row justify-content-center mt-2 mb-2">
-                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text2" >
-                                <h5><label for="ativo">Ativo</label></h5>
+                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text2">
+                                    <h5><label for="ativo">Ativo</label></h5>
                                     <select name="ativo" required minlenght="1" class="form-select invalid" id="ativo">
                                         <option selected value="">Selecione</option>
                                         <option value="Sim">Sim</option>
@@ -134,12 +132,13 @@
                                     <div class="input-group">
                                         <span class="input-group-text">R$</span>
                                         <input name="valor" required minlenght="1" num class="form-control invalid"
-                                            type="text" placeholder="Valor" id="valor" onkeypress="$(this).mask('###.###.###.###.###,##', {reverse: true}); return event.charCode >= 48 && event.charCode <= 57">
+                                            type="text" placeholder="Valor" id="valor"
+                                            onkeypress="$(this).mask('###.###.###.###.###,##', {reverse: true}); return event.charCode >= 48 && event.charCode <= 57">
                                     </div>
                                 </div>
                             </div>
                             <div class="d-grid gap-2 d-md-block mt-5" id="botao">
-                                <input id="salvar" type="submit" value="Salvar" class="btn btn-outline-dark"></a>
+                                <input id="salvar" type="submit" value="Salvar" class="btn btn-outline-dark">
                                 <a href="../html/index.html" class="btn btn-outline-dark">Cancelar</a>
                             </div>
                         </form>
@@ -157,7 +156,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/funcoes.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
 
 </body>
 
