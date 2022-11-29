@@ -28,16 +28,50 @@ body {
 }
 
 @media (max-width: 767.98px) {
-  .sidebar {
-    top: 5rem;
+  #sidebarMenu {
+    max-height: 250px;
+  }
+
+  .sidebar-sticky {
+    max-height: 250px;
+    display: flex;
+  }
+
+  #listaNav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav {
+    max-height: 200px;
+    display: flex;
+  }
+
+  nav-link {
+    font-size: large;
+  }
+
+  .nav-item {
+    margin-top: 0%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #topoBarra {
+    flex-direction: row;
+  }
+
+  #logo {
+    display: none;
   }
 }
 
-.sidebar-sticky {
-  height: calc(100vh - 48px);
+#listaNav {
+  height: 100%;
+  position: relative;
   background-color: #333;
-  overflow-x: hidden;
-  overflow-y: auto;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
   /* Scrollable contents if viewport is shorter than content. */
 }
 
@@ -116,6 +150,10 @@ body {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+
+  #logoSmall {
+    display: none;
+  }
 }
 
 .b-example-divider {
@@ -137,12 +175,8 @@ body {
   fill: currentColor;
 }
 
-.nav-item {
-  margin-top: 15%;
-}
-
 .logout {
-  margin-top: 50%
+  bottom: 0;
 }
 
 .nav-scroller {
