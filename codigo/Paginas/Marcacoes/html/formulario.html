@@ -16,6 +16,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
     <script src="../js/adicionar.js"></script>
     
 
@@ -98,87 +102,69 @@
                     </div>
                 </div>
                 <div class="card">
-                
-                    <!-- Conferir com o grupo -->
-                    <!-- <div class="fs-4 mb-3">
-                    <h4 class="text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                            </svg> Dados Gerais
-                    </h4>
-                    </div> -->
-
-                    <div class="txt1">
-                        <div class="card" id="text" style=" width: 33%;">
-                            <div class="card-body">
-                                <!-- será necessário implementar um select, puxando os clientes da tela de Clientes -->
-                                <h5 class="card-title">Cliente</h5>
-                                <form action="">
-                                    <input class="form-control me-2" type="text" placeholder="Nome" id="cliente"
-                                        aria-label="Search">
-                                </form>
+                    <div class="card-body">
+                        <form action="index.html" method="post" id="form_marcacao" class="form">
+                            <div class="txt1" style="display: flex; justify-content:space-around">
+                                <div class="card" id="text" style=" width: 45%;">
+                                    <h5><label for="cliente" type="hidden">Cliente</label></h5>
+                                    <input type="text" name="cliente" id="cliente" required minlength="4" class="form-control me-2" placeholder="Nome do cliente"/>
+                                </div>
+                                <div class="card" id="text" style="width: 45%;">
+                                    <h5><label for="quadra" type="hidden">Quadra</label></h5>
+                                    <input type="text" name="quadra" id="quadra" required minlenght="4" class="form-control me-2" placeholder="Nome da quadra"/>
+                                </div>
+                                <div class="card" id="text" style="width: 45%;">
+                                    <h5><label for="data" type="hidden">Data/Hora</label></h5>
+                                    <input type="text" name="data" id="data" required minlenght="10" class="form-control me-2" placeholder="Data/Hora"/>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card" id="text" style="width: 33%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Quadra</h5>
-                                <form action="">
-                                    <input class="form-control me-2" type="text" placeholder="Nome da quadra" id="quadra"
-                                        aria-label="Search">
-                                </form>
+                            <div class="txt2" style="display: flex; justify-content:space-around">
+                                <div class="card" id="text" style="width: 45%;">
+                                    <h5><label for="valor" type="hidden">Valor</label></h5>
+                                    <input type="text" name="valor" id="valor" required minlenght="1" class="form-control me-2" placeholder="Data/Hora"/>
+                                </div>
+                                <div class="card" id="text" style="width: 45%;">
+                                    <h5><label for="pago" type="hidden">Pago</label></h5>
+                                    <select name="pago" required minlenght="1" class="form-select" id="pago">
+                                        <option selected value="">Selecione</option>
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não">Não</option>
+                                    </select>
+                                </div>
+                                <div class="card" id="text" style="width: 45%;">
+                                <h5><label for="quadra" type="hidden">Ativo</label></h5>
+                                    <select name="ativo" required minlenght="1" class="form-select" id="ativo">
+                                        <option selected value="">Selecione</option>
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não">Não</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card" id="text" style="width: 33%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Data/Hora</h5>
-                                <input class="form-control me-2" type="text" placeholder="Data/Hora" id="data" aria-label="Search">
-                            </div>
-                        </div>
+                            <div class="d-grid gap-2 d-md-block" id="botao">
+                                <input id="salvar" type="submit" value="Salvar" action="index.html" class="btn btn-outline-dark">
+                                <!-- <a href="../html/index.html"><input id="salvar" type="submit" value="Salvar" class="btn btn-outline-dark"></a>  -->
+                                 <!-- <a href="../html/index.html" type="submit" id="salvar" class="btn btn-outline-dark">Salvar</a>  -->
+                                 <a href="../html/index.html" class="btn btn-outline-dark">Cancelar</a> 
+                           </div>
+                        </form>
+                        <!-- <div class="d-grid gap-2 d-md-block" id="botao">
+                                <a href="../html/index.html"><input id="salvar" type="submit" value="Salvar" class="btn btn-outline-dark"></a>
+                                <a href="../html/index.html" class="btn btn-outline-dark">Cancelar</a>
+                           </div> -->
                     </div>
-                    <div class="txt2">
-                        <div class="card" id="text2" style="width: 33%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Valor</h5>
-                                <input class="form-control me-2" type="text" placeholder="Valor"
-                                    onkeypress="$(this).mask('###,##', {reverse: true}); return event.charCode >= 48 && event.charCode <= 57" id="valor" aria-label="Search">
-                                    <!-- <input type="text" class="form-control" onkeypress="$(this).mask('R$ #.##0,00', {reverse: true});"> -->
-
-                            </div>
-                        </div>
-                        <div class="card" id="text2" style="width: 33%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Pago</h5>
-                                <select required class="form-select" id="pago">
-                                    <option selected value="">Selecione</option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                                <!-- <input class="form-control me-2" type="text" placeholder="Número"
-                                    onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="wpp" aria-label="Search"> -->
-                            </div>
-                        </div>
-                        <div class="card" id="text2" style="width: 33%;">
-                            <div class="card-body">
-                                <h5 class="card-title">Ativo</h5>
-                                <select required class="form-select" id="ativo">
-                                    <option selected value="">Selecione</option>
-                                    <option value="Sim">Sim</option>
-                                    <option value="Não">Não</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-grid gap-2 d-md-block" id="botao">
-                    <a href="../html/index.html" type="submit" id="salvar" class="btn btn-outline-dark">Salvar</a>
-                    <a href="../html/index.html" class="btn btn-outline-dark">Cancelar</a>
-               </div>
             </main>
         </div>
     </div>
-</body>
+    <script>
+        const form = document.getElementById('')
+    </script>
 <script src="../js/doc.js" defer></script>
 <script src="../js/bootstrap.bundle.min.js"></script>
-
+<script>
+    $(function(){
+        $("#form_marcacao").validate();
+        
+    });
+</script>
+</body>
 </html>

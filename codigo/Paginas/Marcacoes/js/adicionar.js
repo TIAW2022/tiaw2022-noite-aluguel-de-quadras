@@ -55,10 +55,38 @@ function adicionaMarcacoes() {
     localStorage.setItem('marcacoes', JSON.stringify(marcAdd));
 }
 
+// $("#form_marcacao").validate({
+//     rules : {
+//           cliente:{
+//                  required:true,
+//                  minlength:3
+//           },
+//           quadra:{
+//                  required:true
+//           },
+//           data:{
+//                  required:true
+//           }                                
+//     },
+//     messages:{
+//           cliente:{
+//                  required:"Por favor, informe seu nome",
+//                  minlength:"O nome deve ter pelo menos 3 caracteres"
+//           },
+//           quadra:{
+//                  required:"É necessário informar um email"
+//           },
+//           mensagem:{
+//                  required:"A mensagem não pode ficar em branco"
+//           }     
+//     }
+// });
+
 $(document).ready(function () {
 
     $("#salvar").on("click", function () {
         adicionaMarcacoes();
+        $(this).attr('href','../html/index.html');
     });
     listaMarcacoes();
 
