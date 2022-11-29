@@ -43,6 +43,11 @@ h2{
     box-shadow: #111111;
 }
 
+.text-term, .text-term1{
+    font-size: 100%;
+    padding-top: 7px;
+}
+
 .form-check{
     padding-top: 5px;
 }
@@ -90,6 +95,10 @@ a.iconsapp{
 
 a.modal-term{
     font-weight: 550;
+}
+
+a.modal-text{
+    text-decoration: underline;
 }
 
 a:hover, a:active{
