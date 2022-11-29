@@ -1,13 +1,13 @@
 //Local storage pessoa fisica
-function leDados() {
-    let strDados = localStorage.getItem('db');
-    let objDados = {};
+function leDadosPF() {
+    let strDadosPF = localStorage.getItem('dbPF');
+    let objDadosPF = {};
 
-    if (strDados) {
-        objDados = JSON.parse(strDados);
+    if (strDadosPF) {
+        objDadosPF = JSON.parse(strDadosPF);
     }
     else {
-        objDados = { registro: [
+        objDadosPF = { registro: [
                 {nome: "Lewis",
                 sobrenome: "Hamilton",
                 email: "lh44@gmail.com",
@@ -16,49 +16,46 @@ function leDados() {
                 phone: "3131313131",
                 wpp: "31955554444",
                 password: "heptacampeao"
-        }
-        ]
+        }]
         }
     }
 
-    return objDados;
+    return objDadosPF;
 }
 
-function salvaDados(dados) {
-    localStorage.setItem('db', JSON.stringify(dados));
+function salvaDadosPF(leDadosPF) {
+    localStorage.setItem('dbPF', JSON.stringify(leDadosPF));
 }
 
-function incluiDados() {
-    let objDados = leDados();
+function incluiDadosPF() {
+    let objDadosPF = leDadosPF();
 
-    let strNome = document.getElementById("nome").value;
-    let strLastname = document.getElementById("lastname").value;
-    let strEmail = document.getElementById("email").value;
-    let strBirth = document.getElementById("birth").value;
-    let strCpf = document.getElementById("cpf").value;
-    let strPhone = document.getElementById("phone").value;
-    let strWpp = document.getElementById("wpp").value;
-    let strPswd = document.getElementById("pswd").value;
+    let strNomePF = document.getElementById("nome").value;
+    let strLastnamePF = document.getElementById("lastname").value;
+    let strEmailPF = document.getElementById("email").value;
+    let strBirthPF = document.getElementById("birth").value;
+    let strCpfPF = document.getElementById("cpf").value;
+    let strPhonePF = document.getElementById("phone").value;
+    let strWppPF = document.getElementById("wpp").value;
+    let strPswdPF = document.getElementById("pswd").value;
 
-    let novoRegistro = {
-        nome: strNome,
-        sobrenome: strLastname,
-        email: strEmail,
-        birth: strBirth,
-        cpf: strCpf,
-        phone: strPhone,
-        wpp: strWpp,
-        password: strPswd
+    let novoRegistroPF = {
+        nome: strNomePF,
+        sobrenome: strLastnamePF,
+        email: strEmailPF,
+        birth: strBirthPF,
+        cpf: strCpfPF,
+        phone: strPhonePF,
+        wpp: strWppPF,
+        password: strPswdPF
     };
 
-    objDados.registro.push(novoRegistro);
-    salvaDados(objDados);
-
-    imprimeDados();
+    objDadosPF.registro.push(novoRegistroPF);
+    salvaDadosPF(objDadosPF);
 
 }
 
-document.getElementById('save_button').addEventListener('click', incluiDados);
+document.getElementById('save_button').addEventListener('click', incluiDadosPF);
 
 //Local Storage pessoa juridica
 
@@ -117,7 +114,6 @@ function incluiDadosPJ() {
     objDadosPJ.registro.push(novoRegistroPJ);
     salvaDadosPJ(objDadosPJ);
 
-    imprimeDadosPJ();
 
 }
 
