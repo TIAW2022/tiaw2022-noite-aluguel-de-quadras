@@ -39,6 +39,12 @@ function adicionaQuadra() {
     var ativo = $('#ativo').val();
     validaAtivo(ativo)
     var valor = $('#valor').val();
+    var cep = $('#cep').val();
+    var uf = $('#uf').val();
+    var cidade = $('#cidade').val();
+    var bairro = $('#bairro').val();
+    var rua = $('#rua').val();
+    var numero = $('#numero').val();
 
     jQuery.extend(jQuery.validator.messages, {
         required: "Preenchimento obrigatório!",
@@ -58,7 +64,13 @@ function adicionaQuadra() {
             nome,
             tipo,
             ativo,
-            valor
+            valor,
+            cep,
+            uf,
+            cidade,
+            bairro,
+            rua,
+            numero
         });
         localStorage.setItem('quadras', JSON.stringify(quadraAdd));
     }
