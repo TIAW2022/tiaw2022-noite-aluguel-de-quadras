@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/funcoes.js"></script>
     <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>
+    <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
@@ -30,10 +31,61 @@
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                 <div class="logo">
-                    <img alt="logo" src="../img/logo_1.png" width="100%">
+                    <img id="logo" alt="logo" src="../img/logo_1.png" width="100%">
+                    <img id="logoSmall" alt="logo" src="../img/nome.png" style="display: none;">
                 </div>
-                <div class="position-sticky pt-3 sidebar-sticky">
-                    <ul class="nav flex-column">
+                <div id="listaNav" class="pt-3 col-12">
+                    <div class="row">
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    home
+                                </span>
+                                Painel
+                            </a>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link active" href="../../Quadras/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    width_wide
+                                </span>
+                            Quadras
+                            </a>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link" href="../../Agenda/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    calendar_month
+                                </span>
+                                Agenda
+                            </a>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link" href="../../Clientes/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    group
+                                </span>
+                                Clientes
+                            </a>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link" href="../../Marcacoes/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    checklist
+                                </span>
+                                Marcações
+                            </a>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link text-danger" href="../../landing_page/html/index.html">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                Sair
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <ul id="topoBarra" class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
                                 <span class="material-symbols-outlined">
@@ -82,7 +134,7 @@
                                 Sair
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             </nav>
 
