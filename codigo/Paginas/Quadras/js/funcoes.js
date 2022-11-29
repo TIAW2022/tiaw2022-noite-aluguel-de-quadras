@@ -49,6 +49,7 @@ function adicionaQuadra() {
 
         $("#form_quadra").validate();
         $(".error").addClass('col-12')
+        $(".invalid").attr("style", 'background-color: #EBCCCC')
     });
     var resultadoValidacao = $("#form_quadra").valid();
     if (resultadoValidacao == true) {

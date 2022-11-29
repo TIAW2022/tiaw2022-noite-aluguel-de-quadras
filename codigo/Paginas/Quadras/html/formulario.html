@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <meta name="theme-color" content="#712cf9">
     <link href="../css/tooltip.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -98,14 +99,14 @@
                     <div class="card-body">
                         <form id="form_quadra" method="post" action="index.html" class="form">
                             <div class="form1 row justify-content-center mb-2 mt-2">
-                                <div class="col-12 col-lg-6 col-md-6 col-sm-12" id="text">
-                                    <label for="nome">Nome</label>
+                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text">
+                                    <h5><label for="nome">Nome</label></h5>
                                     <input type="text" name="nome" id="nome" required minlength="2"
-                                        class="form-control me-2" placeholder="Nome da quadra">
+                                        class="form-control me-2 invalid" placeholder="Nome da quadra">
                                 </div>
-                                <div class="col-12 col-lg-6 col-md-6 col-sm-12" id="text" >
-                                    <label for="tipo">Tipo</label>
-                                    <select required name="tipo" minlenght="1" class="form-select me-2" type="text"
+                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text" >
+                                <h5><label for="tipo">Tipo</label></h5>
+                                    <select required name="tipo" minlenght="1" class="form-select me-2 invalid" type="text"
                                         placeholder="Society, basquete, etc..." id="tipo">
                                         <option value="">Selecione</option>
                                         <option value="Poliesportiva">Poliesportiva</option>
@@ -119,20 +120,20 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form2 row justify-content-center mt-3 mb-2">
-                                <div class="col-12 col-lg-6 col-md-6 col-sm-12" id="text2" >
-                                    <label for="ativo">Ativo</label>
-                                    <select name="ativo" required minlenght="1" class="form-select" id="ativo">
+                            <div class="form2 row justify-content-center mt-2 mb-2">
+                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text2" >
+                                <h5><label for="ativo">Ativo</label></h5>
+                                    <select name="ativo" required minlenght="1" class="form-select invalid" id="ativo">
                                         <option selected value="">Selecione</option>
                                         <option value="Sim">Sim</option>
                                         <option value="Não">Não</option>
                                     </select>
                                 </div>
-                                <div class="col-12 col-lg-6 col-md-6 col-sm-12" id="text2">
-                                    <label class="col-12" for="valor">Valor/hora</label>
+                                <div class="col-12 col-lg-6 col-md-6 col-sm-12 mt-2" id="text2">
+                                    <h5><label class="col-12" for="valor">Valor/hora</label></h5>
                                     <div class="input-group">
                                         <span class="input-group-text">R$</span>
-                                        <input name="valor" required minlenght="1" num class="form-control me-2"
+                                        <input name="valor" required minlenght="1" num class="form-control invalid"
                                             type="text" placeholder="Valor" id="valor" onkeypress="$(this).mask('###.###.###.###.###,##', {reverse: true}); return event.charCode >= 48 && event.charCode <= 57">
                                     </div>
                                 </div>
