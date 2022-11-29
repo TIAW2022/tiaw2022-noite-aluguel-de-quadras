@@ -41,53 +41,39 @@ function adicionaMarcacoes() {
     var valor = $('#valor').val();
     var pago = $('#pago').val();
     var ativo = $('#ativo').val();
-    validaAtivo(ativo);
-    marcAdd.push({
-        id,
-        cliente,
-        quadra,
-        data,
-        valor,
-        pago,
-        ativo
-    });
-    console.log(marcAdd);
-    localStorage.setItem('marcacoes', JSON.stringify(marcAdd));
-}
+    
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Preenchimento obrigatório!",
+        minlength: jQuery.validator.format("É necessário inserir no mínimo {0} caracteres."),
+    })
+    
+    $(function(){
+        $("#form_marcacao").validate();
+    })
 
-// $("#form_marcacao").validate({
-//     rules : {
-//           cliente:{
-//                  required:true,
-//                  minlength:3
-//           },
-//           quadra:{
-//                  required:true
-//           },
-//           data:{
-//                  required:true
-//           }                                
-//     },
-//     messages:{
-//           cliente:{
-//                  required:"Por favor, informe seu nome",
-//                  minlength:"O nome deve ter pelo menos 3 caracteres"
-//           },
-//           quadra:{
-//                  required:"É necessário informar um email"
-//           },
-//           mensagem:{
-//                  required:"A mensagem não pode ficar em branco"
-//           }     
-//     }
-// });
+    var validacao = $("#form_marcacao").valid();
+    console.log(validacao);
+    validaAtivo(ativo);
+    if(validacao == true){
+        marcAdd.push({
+            id,
+            cliente,
+            quadra,
+            data,
+            valor,
+            pago,
+            ativo
+        });
+        console.log(marcAdd);
+        localStorage.setItem('marcacoes', JSON.stringify(marcAdd));
+        window.location.href = "../html/index.html";
+    }
+}
 
 $(document).ready(function () {
 
-    $("#salvar").on("click", function () {
+    $("#salvar").on("click", function (){
         adicionaMarcacoes();
-        $(this).attr('href','../html/index.html');
     });
     listaMarcacoes();
-
 })
