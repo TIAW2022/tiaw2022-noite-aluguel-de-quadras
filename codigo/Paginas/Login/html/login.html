@@ -1,4 +1,122 @@
-<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signin Template · Bootstrap v5.2</title>
+
+  <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet"> 
+    
+</head>
+
+<body class="text-center">
+
+  <main class="form-signin w-100 m-auto">
+    <form class="row d-flex">
+      <div class="row mb-2">
+        <img class="mb-4" src="../img/logo.jpg" alt="" style="border-radius: 50px;">
+      </div>
+      <div class="row">
+        <div class="form-floating input-group">
+          <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
+          <label style="font-size: 20px;margin-left: 12px"  for="floatingInput">E-mail</label>
+        </div>
+
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
+          <label style="font-size: 20px;margin-left: 12px" for="floatingPassword">Senha</label>
+        </div>
+        
+        <div class="row"></div>
+        <div class="form-check d-flex" style="justify-content: left;">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="">
+          <label style="margin-left: 12px" class="form-check-label" for="flexRadioDefault1">
+            Sou proprietário
+          </label>
+        </div>
+        <div class="form-check d-flex" style="justify-content: left;">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="">
+          <label style="margin-left: 12px" for="flexRadioDefault2">
+            Sou cliente
+          </label>
+        </div>
+
+        <div class="form-check form-switch d-flex" style="justify-content: center;">
+          <p><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"></p>
+          <p><label class="form-check-label" for="flexSwitchCheckDefault">Lembrar credenciais</label></p>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-success" type="submit">Entrar</button>
+
+        <p class="mt-5 mb-3 text-muted">© Alugquadras - 2022</p>
+        <p clas="mt-5 mb-3 text-muted">Todos os direitos reservados.</p>
+      </div>
+    </form>
+  </main>
+
+</body>
+
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
@@ -22,4 +140,4 @@
 
     </section>
   </body>
-</html>
+</html> -->
