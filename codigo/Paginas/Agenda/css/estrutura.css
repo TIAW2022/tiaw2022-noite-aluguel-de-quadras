@@ -28,47 +28,41 @@ body {
 }
 
 @media (max-width: 767.98px) {
-  #sidebarMenu {
+  #sidebarMenu{
     max-height: 250px;
   }
-
-  .sidebar-sticky {
+  
+  .sidebar-sticky{
     max-height: 250px;
     display: flex;
   }
-
-  #listaNav {
+  #listaNav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
   }
-
-  .nav {
+  .nav{
     max-height: 200px;
-    display: flex;
+    display:flex ;
   }
-
-  nav-link {
+  nav-link{
     font-size: large;
   }
-
-  .nav-item {
+  .nav-item{
     margin-top: 0%;
     display: flex;
     justify-content: center;
   }
-
-  #topoBarra {
+  #topoBarra{
     flex-direction: row;
   }
-
-  #logo {
+  #logo{
     display: none;
   }
 }
 
 #listaNav {
   height: 100%;
-  position: relative;
+  position:relative;
   background-color: #333;
   /* overflow-x: hidden;
   overflow-y: auto; */
@@ -150,8 +144,7 @@ body {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
-
-  #logoSmall {
+  #logoSmall{
     display: none;
   }
 }
@@ -175,10 +168,9 @@ body {
   fill: currentColor;
 }
 
-.logout {
+.logout{
   bottom: 0;
 }
-
 .nav-scroller {
   position: relative;
   z-index: 2;

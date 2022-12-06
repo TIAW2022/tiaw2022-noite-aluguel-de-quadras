@@ -32,75 +32,75 @@
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="logo">
-                    <img alt="logo" src="../img/logo_1.png" width="100%">
+                <div class="logo" style="background-color: #333;">
+                    <img id="logo" alt="logo" src="../img/logo_1.png" width="100%">
+                    <img id="logoSmall" alt="logo" src="../img/nome.png" width="100%" class="">
                 </div>
-                <div class="position-sticky pt-3 sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
+                <div id="listaNav" class="pt-1 col-12">
+                    <div class="row">
+                      <div class="col-4 col-sm-4 col-md-12 mt-2 nav-item">
                             <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
                                 <span class="material-symbols-outlined">
                                     home
                                 </span>
                                 Painel
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Quadras/html/index.html">
                                 <span class="material-symbols-outlined">
                                     width_wide
                                 </span>
                                 Quadras
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Agenda/html/index.html">
                                 <span class="material-symbols-outlined">
                                     calendar_month
                                 </span>
                                 Agenda
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Clientes/html/index.html">
                                 <span class="material-symbols-outlined">
                                     group
                                 </span>
                                 Clientes
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link active" href="../../Marcacoes/html/index.html">
                                 <span class="material-symbols-outlined">
                                     checklist
                                 </span>
                                 Marcações
                             </a>
-                        </li>
-                        <li class="nav-item logout">
-                            <a class="nav-link" href="../../landing_page/html/index.html">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link text-danger" href="../../landing_page/html/index.html">
                                 <span class="material-symbols-outlined">
                                     logout
                                 </span>
                                 Sair
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
-
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1  class="h2">Marcações</h1>
+                    <h1 class="h2">Marcações</h1>
                     <div class="btn-toolbar mb-2 mb-md-0"></div>
                 </div>
                 <div>
-                  <a href="../html/formulario.html" class="btn btn-outline-dark">Adicionar</a>
+                    <a href="../html/formulario.html" class="btn btn-outline-dark">Adicionar</a>
                 </div><br>
                 <div class="card">
                     <div class="card-body">
-                        <table cellpadding ="0" cellspacing ="0" class="table table-hover mt-1">
+                        <table cellpadding="0" cellspacing="0" class="table table-hover mt-1">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -109,7 +109,7 @@
                                     <th scope="col">Data/Hora</th>
                                     <th scope="col">Valor</th>
                                     <th scope="col">Pago</th>
-                                    <th scope="col" >Ativo</th>
+                                    <th scope="col">Ativo</th>
                                     <th scope="col" class="text-center">Ações</th>
                                 </tr>
                             </thead>

@@ -16,8 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>
     <script src="../js/doc.js"></script>
-    
-    
+
+
 
 </head>
 
@@ -33,60 +33,61 @@
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="logo">
-                    <img alt="logo" src="../img/logo_1.png" width="100%">
+                <div class="logo" style="background-color: #333;">
+                    <img id="logo" alt="logo" src="../img/logo_1.png" width="100%">
+                    <img id="logoSmall" alt="logo" src="../img/nome.png" width="100%" class="">
                 </div>
-                <div class="position-sticky pt-3 sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
+                <div id="listaNav" class="pt-1 col-12">
+                    <div class="row">
+                      <div class="col-4 col-sm-4 col-md-12 mt-2 nav-item">
                             <a class="nav-link" aria-current="page" href="../../Painel/html/index.html">
                                 <span class="material-symbols-outlined">
                                     home
                                 </span>
                                 Painel
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Quadras/html/index.html">
                                 <span class="material-symbols-outlined">
                                     width_wide
                                 </span>
                                 Quadras
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Agenda/html/index.html">
                                 <span class="material-symbols-outlined">
                                     calendar_month
                                 </span>
                                 Agenda
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link active" href="../../Clientes/html/index.html">
                                 <span class="material-symbols-outlined">
                                     group
                                 </span>
                                 Clientes
                             </a>
-                        </li>
-                        <li class="nav-item">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
                             <a class="nav-link" href="../../Marcacoes/html/index.html">
                                 <span class="material-symbols-outlined">
                                     checklist
                                 </span>
                                 Marcações
                             </a>
-                        </li>
-                        <li class="nav-item logout">
-                            <a class="nav-link" href="../../landing_page/html/index.html">
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+                            <a class="nav-link text-danger" href="../../landing_page/html/index.html">
                                 <span class="material-symbols-outlined">
                                     logout
                                 </span>
                                 Sair
                             </a>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
 
@@ -104,7 +105,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Nome</h5>
                                     <form action="">
-                                        <input class="form-control me-2" type="text" placeholder="Nome" id="nome" 
+                                        <input class="form-control me-2" type="text" placeholder="Nome" id="nome"
                                             aria-label="Search">
                                     </form>
                                 </div>
@@ -113,16 +114,16 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Sobrenome</h5>
                                     <form action="">
-                                        <input class="form-control me-2" type="text" placeholder="Sobrenome" id="sobrenome"
-                                            aria-label="Search">
+                                        <input class="form-control me-2" type="text" placeholder="Sobrenome"
+                                            id="sobrenome" aria-label="Search">
                                     </form>
                                 </div>
                             </div>
                             <div class="card" id="text" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">E-mail</h5>
-                                    <input class="form-control me-2" id="email" type="email" onblur="validacaoEmail(f1.email)"
-                                        placeholder="E-mail" aria-label="Search">
+                                    <input class="form-control me-2" id="email" type="email"
+                                        onblur="validacaoEmail(f1.email)" placeholder="E-mail" aria-label="Search">
                                 </div>
                             </div>
                         </div>
@@ -131,14 +132,16 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Telefone</h5>
                                     <input class="form-control me-2" id="telefone" type="text" placeholder="Number"
-                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                        aria-label="Search">
                                 </div>
                             </div>
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Whatsapp</h5>
                                     <input class="form-control me-2" id="whats" type="text" placeholder="Number"
-                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="Search">
+                                        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                                        aria-label="Search">
                                 </div>
                             </div>
                             <div class="card" id="text2" style="width: 33%;">
@@ -158,7 +161,7 @@
                 <div class="d-grid gap-2 d-md-block" id="botao">
                     <a href="../html/index.html" id="salvar" class="btn btn-outline-dark">Salvar</a>
                     <a href="../html/index.html" class="btn btn-outline-dark">Cancelar</a>
-               </div>
+                </div>
             </main>
         </div>
     </div>
