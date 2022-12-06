@@ -1,0 +1,23 @@
+h5{
+   text-align: center;
+}
+.txt1{
+    display: flex;
+    justify-content: center;
+}
+.txt2{
+    display: flex;
+    justify-content: center;
+}
+#text{
+    border: none;
+    margin-top: 5%;
+
+}
+#text2{
+    border: none;
+    margin-top: 10%;
+}
+#botao{
+    margin-top: 2%;  
+}

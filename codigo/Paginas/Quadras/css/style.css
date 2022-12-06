@@ -1,0 +1,14 @@
+h5{
+    text-align: left;
+}
+label{
+    font-size:large;
+}
+#botao{
+    margin-top: 2%;  
+}
+.error{
+    color: red;
+    font-size:small;
+
+}

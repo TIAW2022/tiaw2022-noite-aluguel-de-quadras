@@ -1,0 +1,248 @@
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlugQuadras - Painel</title>
+
+  <link rel="icon" type="image/x-icon" href="../../../Public/img/favicon.ico">
+  <link href="../../../Public/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../Public/css/fontawesome.min.css" rel="stylesheet">
+  <link href="../../../Menu/estrutura.css" rel="stylesheet">
+  <link href="../css/agenda.css" rel="stylesheet">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <meta name="theme-color" content="#712cf9">
+  <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Bem vindo de volta! </a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="logo" style="background-color: #333;">
+          <img id="logo" alt="logo" src="../../../Public/img/logo.jpg" width="100%">
+          <img id="logoSmall" alt="logo" src="../../../Public/img/nome.png" width="100%" class="">
+        </div>
+        <div id="listaNav" class="pt-1 col-12">
+          <div class="row">
+            <div id="home" class="col-4 col-sm-4 col-md-12 mt-2 nav-item">
+              <a class="nav-link active" aria-current="page" href="../../Painel/html/index.html">
+                <span class="material-symbols-outlined">
+                  home
+                </span>
+                Painel
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+              <a class="nav-link" href="../../Quadras/html/index.html">
+                <span class="material-symbols-outlined">
+                  width_wide
+                </span>
+                Quadras
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+              <a class="nav-link" href="../../Agenda/html/index.html">
+                <span class="material-symbols-outlined">
+                  calendar_month
+                </span>
+                Agenda
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+              <a class="nav-link" href="../../Clientes/html/index.html">
+                <span class="material-symbols-outlined">
+                  group
+                </span>
+                Clientes
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+              <a class="nav-link" href="../../Marcacoes/html/index.html">
+                <span class="material-symbols-outlined">
+                  checklist
+                </span>
+                Marcações
+              </a>
+            </div>
+            <div class="col-4 col-sm-4 col-md-12 mt-5 nav-item">
+              <a class="nav-link text-danger" href="../../landing_page/html/index.html">
+                <span class="material-symbols-outlined">
+                  logout
+                </span>
+                Sair
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Painel</h1>
+          <div class="btn-toolbar mb-2 mb-md-0">
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-sm-12">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Marcações do dia -
+                  <script>
+                    var data = new Date();
+                    var dia = String(data.getDate()).padStart(2, '0');
+                    var mes = String(data.getMonth() + 1).padStart(2, '0');
+                    var ano = data.getFullYear();
+                    dataAtual = dia + '/' + mes + '/' + ano;
+                    document.write(`${dataAtual}`)
+                  </script>
+                </h5>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">Hora</th>
+                      <th scope="col">Quadra</th>
+                      <th scope="col">Cliente</th>
+                      <th scope="col">Valor</th>
+                      <th scope="col">Pago</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>08:30</td>
+                      <td>Society 1</td>
+                      <td>Arthur</td>
+                      <td>R$ 160,00</td>
+                      <td>
+                        <span style="color:red" class="material-symbols-outlined">
+                          close
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>17:30</td>
+                      <td>Futsal 1</td>
+                      <td>Paulo</td>
+                      <td>R$ 120,00</td>
+                      <td>
+                        <span style="color:red" class="material-symbols-outlined success">
+                          close
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>19:00</td>
+                      <td>Society 2</td>
+                      <td>Leo</td>
+                      <td>R$ 160,00</td>
+                      <td>
+                        <span style="color:green" class="material-symbols-outlined">
+                          done
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>21:30</td>
+                      <td>Futsal 2</td>
+                      <td>Ronei</td>
+                      <td>R$ 120,00</td>
+                      <td>
+                        <span style="color:green" class="material-symbols-outlined">
+                          done
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="../../Marcacoes/html/index.html" class="btn btn-success">Visualizar marcações</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-8 col-sm-12 mb-5">
+            <div class="card">
+              <div class="card-body text-center">
+                <h5 class="card-title">Marcações do mês</h5>
+                <div class="col-sm-12">
+                  <div id="calendar"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-5">
+            <div class="">
+              <div class="card mb-5">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Valor à receber hoje</h5>
+                  <p class="card-text"></p>
+                  <div style="color: green;">
+                    <span class="material-symbols-outlined" style="font-size:80px;">
+                      savings
+                    </span>
+                    <h1>R$ 560,00</h1>
+                  </div>
+                  <a href="../../Marcacoes/html/index.html" class="btn btn-success">Visualizar marcações</a>
+                </div>
+              </div>
+              <div class="align-self-end">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">Melhores clientes</h5>
+                    <table class="table table-hover text-center">
+                      <tbody>
+                        <tr>
+                          <td>Arthur</td>
+                        </tr>
+                        <tr>
+                          <td>Paulo</td>
+                        </tr>
+                        <tr>
+                          <td>Leo</td>
+                        </tr>
+                        <tr>
+                          <td>Ronei</td>
+                        </tr>
+                        <tr>
+                          <td>Guilherme</td>
+                        </tr>
+                        <tr>
+                          <td>Gabriel</td>
+                        </tr>
+                        <tr>
+                          <td>Lucas</td>
+                        </tr>
+                        <tr>
+                          <td>Leda</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <a href="../../Clientes/html/index.html" class="btn btn-success">Visualizar clientes</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 mb-5">
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+<script src="../../../Public/js/moment.min.js"></script>
+<script src="../js/agenda.js"></script>
+
+</html>
