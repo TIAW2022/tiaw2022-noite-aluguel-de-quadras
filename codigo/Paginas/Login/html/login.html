@@ -7,13 +7,23 @@
 
   <link href="https://getbootstrap.com/docs/5.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link href="../css/style.css" rel="stylesheet"> 
+  <link href="../css/style.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  <link href="../css/fontawesome.min.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>
+
 </head>
 
-<body class="text-center">
+<body class="col-12 text-center">
+  <a id="botaoVoltar" class="btn btn-success shadow d-flex" href="../../landing_page/html/index.html"
+    style="align-items: center; font-size: 20px;justify-content: space-between;">
+    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+    <span class="d-flex">
+      Voltar
+    </span>
+  </a>
 
-  <main class="form-signin w-100 m-auto">
+  <main class="row form-signin w-100 m-auto">
     <form class="col-12">
       <div class="row mb-2">
         <img class="mb-4" src="../img/logo.jpg" alt="" style="border-radius: 50px;">
@@ -21,23 +31,25 @@
       <div class="row">
         <div class="form-floating input-group">
           <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
-          <label style="font-size: 20px;margin-left: 12px"  for="floatingInput">E-mail</label>
+          <label style="font-size: 20px;margin-left: 12px" for="floatingInput">E-mail</label>
         </div>
 
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
           <label style="font-size: 20px;margin-left: 12px" for="floatingPassword">Senha</label>
         </div>
-        
+
         <div class="row"></div>
         <div class="form-check d-flex " style="justify-content: left;">
-          <input style="margin-left: 0" class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="">
+          <input style="margin-left: 0" class="form-check-input " type="radio" name="flexRadioDefault"
+            id="flexRadioDefault1" value="">
           <label style="margin-left: 12px" class="form-check-label" for="flexRadioDefault1">
             Sou proprietário
           </label>
         </div>
         <div class="form-check d-flex" style="justify-content: left;">
-          <input style="margin-left: 0" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="">
+          <input style="margin-left: 0" class="form-check-input" type="radio" name="flexRadioDefault"
+            id="flexRadioDefault2" value="">
           <label style="margin-left: 12px" for="flexRadioDefault2">
             Sou cliente
           </label>
@@ -49,11 +61,11 @@
         </div>
 
         <button class="w-100 btn btn-lg btn-success" type="submit">Entrar</button>
-
-        <p class="mt-5 mb-3 text-muted">© Alugquadras - 2022</p>
-        <p clas="mt-5 mb-3 text-muted">Todos os direitos reservados.</p>
       </div>
     </form>
+    <p class="mt-5">Ainda não possui conta? <a href="../../Tela de cadastro/html/index.html">Cadastre-se!</a></p>
+    <p class="mt-5 mb-3 text-muted">© Alugquadras - 2022</p>
+    <p clas="mt-5 mb-3 text-muted">Todos os direitos reservados.</p>
   </main>
 
 </body>
@@ -113,31 +125,3 @@
 </style>
 
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>Login</title>
-</head>
-<body>
-    <section class="area-login">
-    <div class="login">
-        <div>
-          <img src="../img/logo.jpg">
-
-        </div>
-
-        <form method="POST">
-            <input type="text" nome="nome" placeholder="nome de usuario" autofocus>
-            <input type="password" nome="senha" placeholder="sua senha " >
-            <input type="submit" value="entrar">
-        </fom>
-        <p>Ainda nao tem uma conta ?<a href="#">criar conta </a></p>
-    </div>
-
-    </section>
-  </body>
-</html> -->
