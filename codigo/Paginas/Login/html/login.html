@@ -10,7 +10,7 @@
   <link href="../css/style.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="../../../Public/img/favicon.ico">
   <link href="../../../Public/css/fontawesome.min.css" rel="stylesheet">
-  <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>
+  <script src="https://use.fontawesome.com/e82ecfdc8f.js"></script>  
 
 </head>
 
@@ -34,27 +34,27 @@
         <div class="row">
           <h3 class="">Fazer login</h3>
           <div class="form-floating mt-2">
-            <input type="email" class="form-control" id="floatingInput" placeholder="nome@exemplo.com">
-            <label style="font-size: 16px;margin-left: 12px" for="floatingInput">E-mail</label>
+            <input type="email" class="form-control" id="emailLogin" placeholder="nome@exemplo.com">
+            <label style="font-size: 16px;margin-left: 12px" for="emailLogin">E-mail</label>
           </div>
 
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-            <label style="font-size: 16px;margin-left: 12px" for="floatingPassword">Senha</label>
+            <input type="password" class="form-control" id="senhaLogin" placeholder="Senha">
+            <label style="font-size: 16px;margin-left: 12px" for="senhaLogin">Senha</label>
           </div>
 
           <div class="row"></div>
           <div class="form-check d-flex " style="justify-content: left;">
             <input style="margin-left: 0" class="form-check-input " type="radio" name="flexRadioDefault"
-              id="flexRadioDefault1" value="">
-            <label style="margin-left: 12px" class="form-check-label" for="flexRadioDefault1">
+              id="proprietario" value="">
+            <label style="margin-left: 12px" class="form-check-label" for="proprietario">
               Sou proprietário
             </label>
           </div>
           <div class="form-check d-flex" style="justify-content: left;">
             <input style="margin-left: 0" class="form-check-input" type="radio" name="flexRadioDefault"
-              id="flexRadioDefault2" value="">
-            <label style="margin-left: 12px" for="flexRadioDefault2">
+              id="cliente" value="">
+            <label style="margin-left: 12px" for="cliente">
               Sou cliente
             </label>
           </div>
@@ -64,7 +64,7 @@
             <p><label class="form-check-label" for="flexSwitchCheckDefault">Lembrar credenciais</label></p>
           </div>
 
-          <button class="w-100 btn btn-lg btn-success" type="submit">Entrar</button>
+          <a id="entrar" class="w-100 btn btn-lg btn-success" type="submit">Entrar</a>
         </div>
         </form>
       </div>
@@ -129,5 +129,7 @@
     -webkit-overflow-scrolling: touch;
   }
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../../../Public/js/jquery.validate.min.js"></script>
+<script src="../js/index.js"></script>
 </html>
