@@ -1,29 +1,25 @@
-var acessoConcedido = ''; 
-
 function validaUsuario() {
-    var usuarios = JSON.parse(localStorage.getItem('dbPF') || '[]');
+    var acessoConcedido = false; 
+    var usuarios = JSON.parse(localStorage.getItem('dbPF') || "[]");
     var login = $('#emailLogin').val();
     var senha = $('#senhaLogin').val();
-
-    const index = usuarios.registro.map(object => object.email && object.password).indexOf(login && senha);
-
-    if(index > -1){
-        acessoConcedido = true;
-    }else{
-        acessoConcedido = false;
-    };
+    // var tipo = $("input:radio[name=tipo]:checked").val()    
+    for(let i in usuarios.registro){
+        if(usuarios.registro[i].email == login && usuarios.registro[i].password == senha){
+            acessoConcedido = true;
+        }
+    }
+    return acessoConcedido;
 }
 
 
 $(document).ready(function () {
     $('#entrar').on('click', function () {
-        
-        validaUsuario();
 
-        if(acessoConcedido === true){
+        if(validaUsuario() == true){
             $('#entrar').attr('href', '../../Painel/html/index.html');
         }else{
-            alert('Usuário e/ou senha inválidos.');
+            $('.labelLogin').html('Usuário e/ou senha incorreto(a)!')
         };
     });
 });

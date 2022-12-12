@@ -27,32 +27,32 @@
   <main class="row form-signin w-100 m-auto mt-1">
     <div class="card">
       <div class="card-body" style="background: none;">
-        <form class="col-12">
+        <form id="form_login" class="col-12">
           <div class="row mt-2 mb-2">
           <img class="mb-4" src="../../../Public/img/logo.jpg" alt="" >
         </div>
         <div class="row">
           <h3 class="">Fazer login</h3>
           <div class="form-floating mt-2">
-            <input type="email" class="form-control" id="emailLogin" placeholder="nome@exemplo.com">
-            <label style="font-size: 16px;margin-left: 12px" for="emailLogin">E-mail</label>
+            <input type="email" class="form-control" id="emailLogin" placeholder="nome@exemplo.com" required>
+            <label class="labelLogin" style="font-size: 16px;margin-left: 12px" for="emailLogin">E-mail</label>
           </div>
 
           <div class="form-floating">
-            <input type="password" class="form-control" id="senhaLogin" placeholder="Senha">
-            <label style="font-size: 16px;margin-left: 12px" for="senhaLogin">Senha</label>
+            <input type="password" class="form-control" id="senhaLogin" placeholder="Senha" required>
+            <label class="labelLogin" style="font-size: 16px;margin-left: 12px" for="senhaLogin">Senha</label>
           </div>
 
           <div class="row"></div>
           <div class="form-check d-flex " style="justify-content: left;">
-            <input style="margin-left: 0" class="form-check-input " type="radio" name="flexRadioDefault"
+            <input style="margin-left: 0" class="form-check-input " type="radio" name="tipo"
               id="proprietario" value="">
             <label style="margin-left: 12px" class="form-check-label" for="proprietario">
               Sou proprietário
             </label>
           </div>
           <div class="form-check d-flex" style="justify-content: left;">
-            <input style="margin-left: 0" class="form-check-input" type="radio" name="flexRadioDefault"
+            <input style="margin-left: 0" class="form-check-input" type="radio" name="tipo"
               id="cliente" value="">
             <label style="margin-left: 12px" for="cliente">
               Sou cliente
