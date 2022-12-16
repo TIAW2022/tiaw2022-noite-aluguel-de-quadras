@@ -25,6 +25,16 @@ body{
     filter: brightness(0.3);
     
 }
+
+div.glass{
+    width: 100%;
+    max-width: cover;
+    background-color: transparent;
+    backdrop-filter: blur(2000px);
+    border-radius: 5px;
+    padding: 15px 2%;
+    color: rgb(0, 0, 0);
+}
 footer{
     position: relative;
     width: 100%;
@@ -146,7 +156,7 @@ footer p{
 }
 .direitos{
     width: 100%;
-    background:#0d0e10 ;
+    background:#1d1f22 ;
     padding: 8px 100px;
     text-align: center;
     color: #999;;
