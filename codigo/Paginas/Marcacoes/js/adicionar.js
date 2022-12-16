@@ -15,10 +15,10 @@ function listaMarcacoes() {
             <td>R$ ${marcacao.valor}</td>
             <td>${marcacao.pago}</td>
             <td>${marcacao.ativo}</td>
-            <td class="text-center">
-                <div style="font-size: 22px;display: flex;justify-content: space-evenly;align-items: center;">
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <td class="text-center" style="display: flex; justify-content: center;">
+                <div style="font-size: 19px;display: flex;justify-content: center;align-items: center;">
+                    <button id="editar" data-target="${marcacao.id}" type="button" class="btn btn-outline-dark" href="#" disabled><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <button id="deletar" data-target="${marcacao.id}" type="button" class="btn btn-outline-danger deletar" style="margin-left: 5%" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
                 </div>
             </td>
         </tr>`
@@ -77,3 +77,20 @@ $(document).ready(function () {
     });
     listaMarcacoes();
 })
+
+function deletarMarcacoes() {
+    $(document).ready(function () {
+
+        $('body').delegate('.deletar', 'click', function () {
+            marcacoes = $.parseJSON(localStorage.getItem('marcacoes'));
+            let idTarget = $(this).attr('data-target') / marcacoes.length - 1;
+            if(marcacoes.length == 1) {
+                idTarget = 0;
+            };
+            marcacoes.splice(idTarget, 1);
+            localStorage.setItem('marcacoes', JSON.stringify(marcacoes));
+            location.reload();
+        });
+        listaMarcacoes();
+    })
+}
