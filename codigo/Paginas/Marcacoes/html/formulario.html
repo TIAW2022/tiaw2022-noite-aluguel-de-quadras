@@ -110,9 +110,10 @@
                                         class="form-control me-2" placeholder="Nome da quadra" />
                                 </div>
                                 <div class="card" id="text" style="width: 45%;">
-                                    <h5><label for="data" type="hidden">Data/Hora</label></h5>
+                                    <h5><label for="data" type="hidden">Data</label></h5>
                                     <input type="text" name="data" id="data" required minlenght="10"
-                                        class="form-control me-2" placeholder="Data/Hora" />
+                                        class="form-control me-2" placeholder="Data"
+                                        onkeypress="$(this).mask('##/##/####'); return event.charCode >= 48 && event.charCode <= 57" id="data">
                                 </div>
                             </div>
                             <div class="txt2" style="display: flex; justify-content:space-around">
