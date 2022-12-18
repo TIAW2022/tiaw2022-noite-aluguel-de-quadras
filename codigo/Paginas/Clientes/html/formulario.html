@@ -105,7 +105,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Nome</h5>
                                     <form action="">
-                                        <input class="form-control me-2" type="text" placeholder="Nome" id="nome"
+                                        <input class="form-control me-2" type="text" required placeholder="Nome" id="nome"
                                             aria-label="Search">
                                     </form>
                                 </div>
@@ -114,7 +114,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Sobrenome</h5>
                                     <form action="">
-                                        <input class="form-control me-2" type="text" placeholder="Sobrenome"
+                                        <input class="form-control me-2" type="text" required placeholder="Sobrenome"
                                             id="sobrenome" aria-label="Search">
                                     </form>
                                 </div>
@@ -122,8 +122,7 @@
                             <div class="card" id="text" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">E-mail</h5>
-                                    <input class="form-control me-2" id="email" type="email"
-                                        onblur="validacaoEmail(f1.email)" placeholder="E-mail" aria-label="Search">
+                                    <input class="form-control me-2" required id="email" type="email" placeholder="E-mail" aria-label="Search">
                                 </div>
                             </div>
                         </div>
@@ -131,7 +130,7 @@
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Telefone</h5>
-                                    <input class="form-control me-2" id="telefone" type="text" placeholder="Number"
+                                    <input class="form-control me-2" id="telefone" required type="text" placeholder="Number"
                                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                         aria-label="Search">
                                 </div>
@@ -139,7 +138,7 @@
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Whatsapp</h5>
-                                    <input class="form-control me-2" id="whats" type="text" placeholder="Number"
+                                    <input class="form-control me-2" id="whats" required type="text" placeholder="Number"
                                         onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                                         aria-label="Search">
                                 </div>
@@ -147,7 +146,7 @@
                             <div class="card" id="text2" style="width: 33%;">
                                 <div class="card-body">
                                     <h5 class="card-title">Ativo</h5>
-                                    <select class="form-select" id="ativo" aria-label="Default select example">
+                                    <select class="form-select" id="ativo" required aria-label="Default select example">
                                         <option selected>Selecione</option>
                                         <option value="Sim">Sim</option>
                                         <option value="Não">Não</option>
